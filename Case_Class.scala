@@ -34,10 +34,14 @@ case class Point(a:Int,b:Int){
 
   //add given two points
   def +(that:Point) = Point(this.x+that.x , this.y+that.y)
+    
+  //move by distance dx and dy  
   def move(dx:Int,dy:Int) = Point(this.x+dx , this.y+dy)
-
+    
+  //distance between 2 points
   def distance(that:Point):Double = sqrt(pow(this.x-that.x,2) + pow(this.y-that.y,2))
-
+    
+  //switch the x and y coordinates of a point
   def invert :Point  = Point (this.y,this.x)
 }
 
